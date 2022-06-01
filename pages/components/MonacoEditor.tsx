@@ -21,11 +21,16 @@ export interface Cursor {
 }
 interface Props {
   value: string;
-  otherCursor: Cursor;
-  onCursorPositionChange: (cur: Cursor) => void
+  // otherCursor: Cursor;
+  // onCursorPositionChange: (cur: Cursor) => void
   onChange: (value?: string) => void;
 }
-const MonacoEditorComponent = ({ otherCursor, onChange, onCursorPositionChange, value }: Props) => {
+const MonacoEditorComponent = ({
+  // otherCursor, 
+  onChange,
+  // onCursorPositionChange,
+  value
+}: Props) => {
   const { language, fontSize, theme } = useSelector((state: RootState) => state.settings)
 
   const editorRef = useRef<Monaco.editor.IStandaloneCodeEditor>(null)
@@ -37,17 +42,17 @@ const MonacoEditorComponent = ({ otherCursor, onChange, onCursorPositionChange, 
   //   }])
   // }, [otherCursor])
 
-  function handleEditorDidMount(editor, monaco) {
-    editor.onDidChangeCursorPosition((e) => {
-      if (onCursorPositionChange) {
-        onCursorPositionChange({
-          line: e.position.lineNumber,
-          col: e.position.column
-        })
-      }
-    })
-    editorRef.current = editor; 
-  }
+  // function handleEditorDidMount(editor, monaco) {
+  //   editor.onDidChangeCursorPosition((e) => {
+  //     if (onCursorPositionChange) {
+  //       onCursorPositionChange({
+  //         line: e.position.lineNumber,
+  //         col: e.position.column
+  //       })
+  //     }
+  //   })
+  //   editorRef.current = editor; 
+  // }
 
   const applyTheme = useCallback((theme, data) => {
     monaco?.editor?.defineTheme(theme, data);
@@ -69,7 +74,7 @@ const MonacoEditorComponent = ({ otherCursor, onChange, onCursorPositionChange, 
       height="100vh"
       className={styles.container}
       theme='vs-dark'
-      onMount={handleEditorDidMount}
+      // onMount={handleEditorDidMount}
       defaultLanguage="javascript"
       language={language}
       value={value}

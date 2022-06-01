@@ -6,6 +6,9 @@ const nextConfig = {
     locales: ['en-US'],
     defaultLocale: 'en-US',
   },
+  images: {
+    domains: ['avatars.githubusercontent.com'],
+  },
   sassOptions: {
     includePaths: [path.join(__dirname, 'node_modules')],
   },

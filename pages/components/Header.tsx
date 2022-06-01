@@ -30,9 +30,11 @@ import Account from './Account'
 // const useSharedUrl = dynamic(() => import('../hooks/useShareUrl'), { ssr: false })
 
 type MenuItem = 'setting' | 'share' | 'account'
-const Editor: NextPage = () => {
+const HeaderComponent = () => {
   const inputRef = useRef<TextInput>()
-  const url = useShareUrl('K8dM48')
+  const router = useRouter()
+  const { id } = router.query
+  const url = useShareUrl(id as string)
   const { language, fontSize, theme } = useSelector((state: RootState) => state.settings)
   const dispatch = useDispatch()
   const [activeTab, setActiveTab] = useState<MenuItem>()
@@ -70,7 +72,7 @@ const Editor: NextPage = () => {
   return (
     <Theme theme="g100">
       <Header aria-label="IBM Platform Name">
-        <HeaderName href="#" prefix="live">
+        <HeaderName href="/" prefix="live">
           [code]
         </HeaderName>
         <HeaderGlobalBar>
@@ -175,6 +177,6 @@ const Editor: NextPage = () => {
   )
 }
 
-export default Editor
+export default HeaderComponent
 
 

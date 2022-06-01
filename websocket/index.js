@@ -3,7 +3,7 @@ const { Server } = require('socket.io')
 
 const io = new Server(3001, {
   cors: {
-    origin: ["http://localhost:3000", "https://livecode.kz"],
+    origin: ["http://localhost:3000", "https://livecode.kz", "https://livecode-kz.herokuapp.com"],
     credentials: true
   }
 });

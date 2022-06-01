@@ -16,3 +16,7 @@ npm run all
 
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+# Live demo
+
+[http://livecode-kz.herokuapp.com/](http://livecode-kz.herokuapp.com/)

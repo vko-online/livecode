@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import prisma from '../../lib/prisma-client'
+import prisma from '../../../lib/prisma-client'
 
 export default async function handle(req: NextApiRequest, res: NextApiResponse) {
   const postId = req.query.id as string

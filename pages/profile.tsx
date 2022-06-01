@@ -7,7 +7,7 @@ import styles from '../styles/Profile.module.scss'
 import { useSession, signIn, signOut } from "next-auth/react"
 import { Theme, Header, Stack, HeaderName, Grid, Column, Tabs, TabList, Tab, Button, TabPanels, TabPanel } from '@carbon/react'
 import { useEffect, useState } from 'react'
-import { serverUrl } from './lib/config'
+import { serverUrl } from '../lib/config'
 import { Post } from '@prisma/client'
 
 interface  Props {

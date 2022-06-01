@@ -3,16 +3,16 @@ import type { NextPage, GetServerSidePropsContext, GetServerSideProps } from 'ne
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import MonacoEditor, { Cursor } from './components/MonacoEditor'
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from './store';
+import { RootState } from '../lib/store';
 import { io } from "socket.io-client"
 import { useRouter } from 'next/router'
 import useSocket from './hooks/useSocket'
 import { useSession } from 'next-auth/react';
 import { useMonaco } from '@monaco-editor/react';
-import prisma from './lib/prisma-client'
+import prisma from '../lib/prisma-client'
 import { Post } from '@prisma/client';
 import debounce from 'lodash.debounce'
-import { serverUrl } from './lib/config';
+import { serverUrl } from '../lib/config';
 
 interface Props {
   post?: Post

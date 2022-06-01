@@ -18,10 +18,10 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import MonacoEditor from '../components/MonacoEditor'
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../store';
-import { setFontSize, setLanguage, setTheme } from '../store/settingsReducer';
+import { RootState } from '../../lib/store';
+import { setFontSize, setLanguage, setTheme } from '../../lib/store/settingsReducer';
 import styles from '../../styles/Editor.module.scss'
-import { themes, languages } from '../data'
+import { themes, languages } from '../../lib/data'
 import dynamic from 'next/dynamic'
 import useShareUrl from '../hooks/useShareUrl'
 import { useRef } from 'react';

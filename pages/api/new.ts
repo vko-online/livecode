@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import prisma from '../lib/prisma-client'
+import prisma from '../../lib/prisma-client'
 import { nanoid } from 'nanoid'
 import { getSession } from "next-auth/react"
 

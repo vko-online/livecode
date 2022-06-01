@@ -1,5 +1,5 @@
 import { NextApiRequest } from "next";
-import { NextApiResponseServerIO } from "../lib/server-io";
+import { NextApiResponseServerIO } from "../../lib/server-io";
 import { Server as ServerIO } from "socket.io";
 import { Server as NetServer } from "http";
 

@@ -2,13 +2,13 @@ import React, { useRef, useState } from "react";
 import dynamic from 'next/dynamic'
 import styles from '../../styles/Editor.module.scss'
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../store";
+import { RootState } from "../../lib/store";
 import { useEffect } from "react";
 
 import { useMonaco } from '@monaco-editor/react'
 import * as Monaco from 'monaco-editor/esm/vs/editor/editor.api'
 import { useCallback } from "react";
-import { themes } from "../data";
+import { themes } from "../../lib/data";
 
 const Editor = dynamic(
   () => import('@monaco-editor/react'),

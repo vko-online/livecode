@@ -1,5 +1,5 @@
 import { NextApiRequest } from "next";
-import { NextApiResponseServerIO } from "../lib/server-io";
+import { NextApiResponseServerIO } from "../../lib/server-io";
 
 const handler = (req: NextApiRequest, res: NextApiResponseServerIO) => {
   if (req.method === "POST") {

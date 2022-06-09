@@ -3,11 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "socket": "node websocket",
     "dev": "next dev",
     "build": "next build",
-    "next_start": "next start -p $PORT",
-    "start": "npm run next_start && npm run socket",
+    "start": "next start -p $PORT",
     "prep_db": "npx prisma db push",
     "postinstall": "npm run prep_db",
     "lint": "next lint"
